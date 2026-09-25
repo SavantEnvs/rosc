@@ -1,0 +1,11 @@
+project: savantenvs/rosc
+
+# Target name (unique within the project) — kept from the original integration.
+target: udp-decode-buggy-mhh-run-9
+
+# origin: https://app.mayhem.security/mayhemheroes/rosc/udp-decode/9
+
+cmds:
+  # libFuzzer binary; Mayhem feeds inputs on stdin (no @@ = stdin input).
+  - cmd: /mayhem/udp_decode
+    libfuzzer: true
